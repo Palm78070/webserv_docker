@@ -4,7 +4,8 @@ build:
 	docker build -t webserv_image .
 
 run:
-	docker run -d -p 9090:9090 --name webserv_container webserv_image
+	docker run -d -p 9090-9093:9090-9093 -p 8080:8080 --name webserv_container webserv_image
+##	docker run -d -p 9090:9090 --name webserv_container webserv_image
 
 exec:
 	docker exec -it webserv_container bash
